@@ -23,26 +23,16 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Configure local.properties
+    - name: Accept Android SDK Licenses & Configure local.properties
       run: |
         echo "sdk.dir=$ANDROID_HOME" > local.properties
+        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null 2>&1 || true
         chmod +x gradlew
 
     - name: Build Debug APK
       run: |
-        ./gradlew assembleDebug --stacktrace 2>&1 | tee build.log
-
-    - name: Show failure log
-      if: failure()
-      run: |
-        tail -n 80 build.log
-
-    - name: Upload Build Log
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-log
-        path: build.log
+        set -o pipefail
+        ./gradlew assembleDebug --stacktrace
 
     - name: Copy & Rename APK
       run: |
@@ -57,11 +47,12 @@ jobs:
 
     - name: Publish GitHub Release
       uses: softprops/action-gh-release@v2
+      continue-on-error: true
       with:
         tag_name: v1.0.0
-        name: Glyph Matrix Suite v1.0.0
+        name: Shubh Glyph Suite v1.0.0
         body: |
-          ### 📱 Glyph Matrix Suite for Nothing Phone (3)
+          ### 📱 Shubh Glyph Suite for Nothing Phone (3)
           Freshly built and signed APK ready for installation on your device.
           
           **How to install on phone:**
