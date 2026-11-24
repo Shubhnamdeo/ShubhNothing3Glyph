@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GlyphAnki"
+rootProject.name = "ShubhNothing3Glyph"
 include(":app")
