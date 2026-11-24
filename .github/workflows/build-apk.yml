@@ -23,36 +23,35 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Accept Android SDK Licenses
-      run: |
-        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
-
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    - name: Build Release APK
-      run: ./gradlew assembleRelease --stacktrace
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug --stacktrace
+
+    - name: Copy & Rename APK
+      run: |
+        cp app/build/outputs/apk/debug/app-debug.apk ShubhNothing3Glyph.apk
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: GlyphMatrix-APK
-        path: app/build/outputs/apk/release/*.apk
+        name: ShubhNothing3Glyph-APK
+        path: ShubhNothing3Glyph.apk
 
     - name: Publish GitHub Release
       uses: softprops/action-gh-release@v2
       with:
         tag_name: v1.0.0
-        name: Glyph Matrix Phone (3) Suite v1.0.0
+        name: Glyph Matrix Suite v1.0.0
         body: |
-          ### 📱 Glyph Matrix Phone (3) Suite
-          Automated build for Nothing Phone (3).
+          ### 📱 Glyph Matrix Suite for Nothing Phone (3)
+          Freshly built and signed APK ready for installation on your device.
           
           **How to install on phone:**
-          1. Tap on `app-release.apk` under **Assets** below.
+          1. Tap on `ShubhNothing3Glyph.apk` under **Assets** below.
           2. Open the downloaded file on your Nothing Phone and tap **Install**.
-        files: |
-          app/build/outputs/apk/release/*.apk
+        files: ShubhNothing3Glyph.apk
         draft: false
         prerelease: false
       env:
