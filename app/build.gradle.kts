@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.alcyon.glyphanki"
-    compileSdk = 36
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.alcyon.glyphanki"
