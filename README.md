@@ -27,9 +27,12 @@ A versatile utility and review suite built for the **Nothing Phone (3) 25×25 Gl
 
 ## 📥 Installation
 
-1. Download the latest pre-built APK:
-   - [Download `app-release.apk`](./app/release/app-release.apk)
-2. On your device, open the downloaded `.apk` file and tap **Install**.
+> [!TIP]
+> **Mobile GitHub App Users**: If tapping the file inside the GitHub app displays gibberish text, tap the **three dots (`...`)** at the top right and select **"Download raw file"** or **"Open in Browser"**.
+
+1. Download the verified APK directly:
+   - 👉 **[Download `app-release.apk` directly](https://github.com/Shubhnamdeo/ShubhNothing3Glyph/raw/main/app/release/app-release.apk)**
+2. On your device, open your **Downloads** folder, tap **`app-release.apk`**, and tap **Install**.
 3. Grant necessary permissions (Accessibility for volume key detection, and file/database permissions).
 
 ---
