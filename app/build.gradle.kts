@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.alcyon.glyphanki"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.alcyon.glyphanki"
-        minSdk = 33
-        targetSdk = 35
+        minSdk = 31
+        targetSdk = 34
         versionCode = 2
         versionName = "1.1"
 

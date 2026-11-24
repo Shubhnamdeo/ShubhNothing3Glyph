@@ -27,7 +27,8 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug --stacktrace
+      run: |
+        ./gradlew assembleDebug --no-daemon --info > gradle_build.log 2>&1 || (tail -n 100 gradle_build.log && exit 1)
 
     - name: Copy & Rename APK
       run: |
