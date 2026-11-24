@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.shubh.glyph"
-        minSdk = 31
+        minSdk = 34
         targetSdk = 34
         versionCode = 2
         versionName = "1.1"
