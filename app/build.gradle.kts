@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "com.alcyon.glyphanki"
-        minSdk = 35
-        targetSdk = 36
+        minSdk = 33
+        targetSdk = 35
         versionCode = 2
         versionName = "1.1"
 
@@ -19,11 +19,15 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("debug")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
