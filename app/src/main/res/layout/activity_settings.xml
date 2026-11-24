@@ -371,7 +371,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ANKIDROID"
+                android:text="FLASHCARDS &amp; DECK ENGINE"
                 android:textColor="@color/nothing_fg"
                 android:textSize="15sp"/>
 
@@ -379,7 +379,7 @@
                 android:id="@+id/ankiApiStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="AnkiDroid API: not configured"
+                android:text="Flashcard API: not configured"
                 android:textColor="@color/caption_gray"
                 android:textSize="12sp"
                 android:layout_marginTop="8dp"/>
@@ -399,7 +399,7 @@
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
                     android:includeFontPadding="false"
-                    android:text="Grant AnkiDroid API"
+                    android:text="Grant Flashcards API"
                     android:textAllCaps="false"
                     android:textSize="12sp"
                     android:background="@drawable/btn_capsule_red"
@@ -413,7 +413,7 @@
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
                     android:includeFontPadding="false"
-                    android:text="Grant AnkiDroid DB"
+                    android:text="Grant Flashcards DB"
                     android:textAllCaps="false"
                     android:textSize="12sp"
                     android:layout_marginTop="6dp"

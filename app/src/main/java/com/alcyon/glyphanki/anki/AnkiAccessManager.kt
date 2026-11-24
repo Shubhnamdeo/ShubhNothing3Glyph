@@ -66,7 +66,7 @@ class AnkiAccessManager(private val context: Context) {
             } catch (_: ActivityNotFoundException) { /* fallback below */ }
         }
         // Fallback 2: Open OS app details so the user can check permissions/links, plus toast instruction
-        Toast.makeText(context, "In AnkiDroid: Settings > Advanced > Enable third‑party and grant Read/Write DB to GlyphAnki", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, "In AnkiDroid: Settings > Advanced > Enable third‑party and grant Read/Write DB to Shubh Glyph", Toast.LENGTH_LONG).show()
         val settingsIntent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
             data = Uri.fromParts("package", ankiPkgs.firstOrNull() ?: "com.ichi2.anki", null)
         }

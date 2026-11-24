@@ -31,7 +31,7 @@ class AudioPlayer(private val context: Context) {
     }
     
     private val mainHandler = Handler(Looper.getMainLooper())
-    private val audioThread = HandlerThread("GlyphAnki-Audio").apply { start() }
+    private val audioThread = HandlerThread("ShubhGlyph-Audio").apply { start() }
     private val audioHandler = Handler(audioThread.looper)
     @Volatile private var player: MediaPlayer? = null
     // Keep an open descriptor when needed (e.g., unknown-length content URIs)

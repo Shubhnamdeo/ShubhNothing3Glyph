@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.alcyon.glyphanki"
+        applicationId = "com.shubh.glyph"
         minSdk = 31
         targetSdk = 34
         versionCode = 2

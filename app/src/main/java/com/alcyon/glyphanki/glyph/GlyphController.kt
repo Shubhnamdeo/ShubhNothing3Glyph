@@ -33,7 +33,7 @@ class GlyphController(private val context: Context) {
     private var didWakeOnce = false
     @Volatile private var needsWakeAfterStop = false
     @Volatile private var keepAliveThread: Thread? = null
-    private val TAG = "GlyphAnki/Glyph"
+    private val TAG = "ShubhGlyph/Glyph"
 
     private data class OffscreenRender(val bitmap: Bitmap, val contentWidth: Int)
 
